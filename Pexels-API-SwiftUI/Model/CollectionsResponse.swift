@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+struct CollectionsResponse: Codable {
+    let page: Int
+    let collections: [Collection]
+}
+
+struct Collection: Codable, Identifiable {
+    let id: Int
+    let title: String
+    let mediaCount: Int
+    let photosCount: Int
+    let videosCount: Int
+}
