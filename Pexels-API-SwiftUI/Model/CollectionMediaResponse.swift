@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CollectionMediaResponse: Codable {
+struct CollectionMediaResponse: Decodable {
     let page: Int
     let media: Photo
 }

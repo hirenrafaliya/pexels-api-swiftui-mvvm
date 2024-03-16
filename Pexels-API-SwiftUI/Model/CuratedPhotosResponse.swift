@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct CuratedPhotosResponse: Codable {
+struct CuratedPhotosResponse: Decodable {
     let page: Int
     let photos: [Photo]
 }
 
-struct Photo: Codable, Identifiable {
+struct Photo: Codable {
     let id: Int
     let width: Int
     let height: Int

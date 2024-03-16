@@ -30,20 +30,24 @@ final class NetworkRouter {
     
     func executeRequest<T: Decodable>(request: URLRequest) async -> Result<T, ResponseError> {
         NetworkLogger.logRequest(request: request)
+        
         do {
             let (data, response) = try await URLSession.shared.data(for: request)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            
             NetworkLogger.logResponse(data: data, response: response)
             
             if let httpResponse = response as? HTTPURLResponse, !(200...299).contains(httpResponse.statusCode) {
                 switch httpResponse.statusCode {
                 case 200...299:
-                    let decodedData = try JSONDecoder().decode(T.self, from: data)
+                    let decodedData = try decoder.decode(T.self, from: data)
                     return .success(decodedData)
                 default:
                     return .failure(.invalidResponse)
                 }
             } else {
-                let decodedData = try JSONDecoder().decode(T.self, from: data)
+                let decodedData = try decoder.decode(T.self, from: data)
                 return .success(decodedData)
             }
         } catch {
