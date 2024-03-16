@@ -8,7 +8,4 @@
 import Foundation
 
 struct Environment {
-    enum tabIndex: Int {
-        case photos = 0, collection = 1, search = 2
-    }
 }

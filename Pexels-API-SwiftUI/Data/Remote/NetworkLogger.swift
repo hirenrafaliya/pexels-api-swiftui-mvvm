@@ -23,8 +23,8 @@ class NetworkLogger {
         let httpResponse = response as? HTTPURLResponse
         let bodyString = getJson(from: data)
         print("\(httpResponse?.statusCode ?? -1): \(response.url?.absoluteString ?? "N/A")")
-        //        print("Headers: \(httpResponse?.allHeaderFields ?? [:])")
-        print("Body: \n\(bodyString)")
+//        print("Headers: \(httpResponse?.allHeaderFields ?? [:])")
+//        print("Body: \n\(bodyString)")
     }
     
     // Returns formatted JSON String

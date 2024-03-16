@@ -10,7 +10,11 @@ import SwiftUI
 
 struct PhotosView: View {
     
+    @StateObject private var viewModel = ViewModel()
+    
     var body: some View {
-        Text("Photos")
+        Text("Photos").onAppear(perform: {
+            viewModel.getPhotos()
+        })
     }
 }
