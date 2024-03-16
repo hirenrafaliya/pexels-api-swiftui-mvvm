@@ -18,6 +18,7 @@
 		D7D365032BA4DC29002C2F05 /* CuratedPhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D365022BA4DC29002C2F05 /* CuratedPhotosResponse.swift */; };
 		D7D365052BA4DF92002C2F05 /* CollectionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D365042BA4DF92002C2F05 /* CollectionsResponse.swift */; };
 		D7D365072BA4E09E002C2F05 /* CollectionMediaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D365062BA4E09E002C2F05 /* CollectionMediaResponse.swift */; };
+		D7D365092BA5BE96002C2F05 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D365082BA5BE96002C2F05 /* NetworkLogger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		D7D365022BA4DC29002C2F05 /* CuratedPhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuratedPhotosResponse.swift; sourceTree = "<group>"; };
 		D7D365042BA4DF92002C2F05 /* CollectionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsResponse.swift; sourceTree = "<group>"; };
 		D7D365062BA4E09E002C2F05 /* CollectionMediaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionMediaResponse.swift; sourceTree = "<group>"; };
+		D7D365082BA5BE96002C2F05 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				D7D364FA2BA49A36002C2F05 /* ResponseError.swift */,
 				D7D364FC2BA49DD8002C2F05 /* NetworkRouter.swift */,
 				D7D365002BA4DBDC002C2F05 /* PexelsService.swift */,
+				D7D365082BA5BE96002C2F05 /* NetworkLogger.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				D7D364FB2BA49A36002C2F05 /* ResponseError.swift in Sources */,
 				D7D364FD2BA49DD8002C2F05 /* NetworkRouter.swift in Sources */,
 				D7D365032BA4DC29002C2F05 /* CuratedPhotosResponse.swift in Sources */,
+				D7D365092BA5BE96002C2F05 /* NetworkLogger.swift in Sources */,
 				D7D365072BA4E09E002C2F05 /* CollectionMediaResponse.swift in Sources */,
 				D7D364E42BA48199002C2F05 /* Pexels_API_SwiftUIApp.swift in Sources */,
 				D7D364F72BA48878002C2F05 /* Constant.swift in Sources */,

@@ -19,6 +19,7 @@ final class PexelsService {
         do {
             let request = router.buildRequest(url: "\(baseURL)/curated", method: .get)
             let result: Result<CuratedPhotosResponse, ResponseError> = await router.executeRequest(request: request)
+//            print(result)
             return result
         }
     }

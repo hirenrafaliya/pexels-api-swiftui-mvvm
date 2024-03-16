@@ -8,13 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+        let service = PexelsService()
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
+            Button(action: {
+            }, label: {
+                Text("CALL API")
+            })
         }
+        .onAppear(perform: {
+            Task {
+                await service.getCuratedPhotos()
+            }
+        })
         .padding()
     }
 }

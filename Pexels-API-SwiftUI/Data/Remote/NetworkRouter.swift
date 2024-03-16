@@ -23,14 +23,16 @@ final class NetworkRouter {
         
         var updatedHeaders = headers ?? [:]
         updatedHeaders["Authorization"] = PEXELS_API_KEY
-        request.allHTTPHeaderFields = headers
+        request.allHTTPHeaderFields = updatedHeaders
         request.httpBody = body
         return request
     }
     
     func executeRequest<T: Decodable>(request: URLRequest) async -> Result<T, ResponseError> {
+        NetworkLogger.logRequest(request: request)
         do {
             let (data, response) = try await URLSession.shared.data(for: request)
+            NetworkLogger.logResponse(data: data, response: response)
             
             if let httpResponse = response as? HTTPURLResponse, !(200...299).contains(httpResponse.statusCode) {
                 switch httpResponse.statusCode {
@@ -48,4 +50,6 @@ final class NetworkRouter {
             return .failure(.requestFailure(error))
         }
     }
+    
+   
 }
