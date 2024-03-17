@@ -14,8 +14,9 @@ struct CollectionItem: View {
     
     var body: some View {
         NavigationLink {
-            Text("IMAGE OPENED")
-                .navigationTitle(collection.title)
+            CollectionDetailView(collection: collection)
+            
+            .navigationTitle(collection.title)
         } label: {
             HStack {
                 VStack(alignment: .leading, spacing: 4) {
@@ -36,7 +37,7 @@ struct CollectionItem: View {
                 .cornerRadius(12)
                 .foregroundStyle(.thickMaterial)
                 .padding(.vertical, 4)
-
+            
         )
         .listRowSeparator(.hidden)
         

@@ -9,5 +9,5 @@ import Foundation
 
 struct CollectionMediaResponse: Decodable {
     let page: Int
-    let media: Photo
+    let media: [Photo]
 }

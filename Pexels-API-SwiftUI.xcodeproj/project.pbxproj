@@ -29,6 +29,9 @@
 		D7D3651D2BA6A6A7002C2F05 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D3651C2BA6A6A7002C2F05 /* HexColor.swift */; };
 		D7D3651F2BA746BB002C2F05 /* CollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D3651E2BA746BB002C2F05 /* CollectionItem.swift */; };
 		D7D365212BA747B7002C2F05 /* CollectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D365202BA747B7002C2F05 /* CollectionsViewModel.swift */; };
+		D7D365242BA77738002C2F05 /* CollectionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D365232BA77738002C2F05 /* CollectionDetailView.swift */; };
+		D7D365262BA777D1002C2F05 /* CollectionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D365252BA777D1002C2F05 /* CollectionDetailViewModel.swift */; };
+		D7D365282BA77F30002C2F05 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D365272BA77F30002C2F05 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,9 @@
 		D7D3651C2BA6A6A7002C2F05 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 		D7D3651E2BA746BB002C2F05 /* CollectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionItem.swift; sourceTree = "<group>"; };
 		D7D365202BA747B7002C2F05 /* CollectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsViewModel.swift; sourceTree = "<group>"; };
+		D7D365232BA77738002C2F05 /* CollectionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetailView.swift; sourceTree = "<group>"; };
+		D7D365252BA777D1002C2F05 /* CollectionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetailViewModel.swift; sourceTree = "<group>"; };
+		D7D365272BA77F30002C2F05 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,7 @@
 		D7D364F22BA482B8002C2F05 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D7D365222BA77728002C2F05 /* CollectionDetail */,
 				D7D365152BA5DD0A002C2F05 /* CustomView */,
 				D7D365142BA5DC6D002C2F05 /* Search */,
 				D7D365132BA5DC5D002C2F05 /* Collections */,
@@ -197,8 +204,18 @@
 			isa = PBXGroup;
 			children = (
 				D7D365162BA5DDAB002C2F05 /* TabView.swift */,
+				D7D365272BA77F30002C2F05 /* ErrorView.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		D7D365222BA77728002C2F05 /* CollectionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D7D365232BA77738002C2F05 /* CollectionDetailView.swift */,
+				D7D365252BA777D1002C2F05 /* CollectionDetailViewModel.swift */,
+			);
+			path = CollectionDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,12 +291,15 @@
 				D7D365012BA4DBDC002C2F05 /* PexelsService.swift in Sources */,
 				D7D364E62BA48199002C2F05 /* ContentView.swift in Sources */,
 				D7D3650D2BA5D543002C2F05 /* CollectionsView.swift in Sources */,
+				D7D365262BA777D1002C2F05 /* CollectionDetailViewModel.swift in Sources */,
 				D7D365112BA5D5C8002C2F05 /* Environment.swift in Sources */,
 				D7D365052BA4DF92002C2F05 /* CollectionsResponse.swift in Sources */,
 				D7D364FB2BA49A36002C2F05 /* ResponseError.swift in Sources */,
 				D7D3650B2BA5D52E002C2F05 /* PhotosView.swift in Sources */,
+				D7D365282BA77F30002C2F05 /* ErrorView.swift in Sources */,
 				D7D3651D2BA6A6A7002C2F05 /* HexColor.swift in Sources */,
 				D7D364FD2BA49DD8002C2F05 /* NetworkRouter.swift in Sources */,
+				D7D365242BA77738002C2F05 /* CollectionDetailView.swift in Sources */,
 				D7D365032BA4DC29002C2F05 /* CuratedPhotosResponse.swift in Sources */,
 				D7D365192BA633F2002C2F05 /* PhotosViewModel.swift in Sources */,
 				D7D3650F2BA5D54D002C2F05 /* SearchView.swift in Sources */,
