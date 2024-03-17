@@ -14,7 +14,11 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $currentTab, content:  {
             
-            PhotosView().tabItem {
+            PhotosView(
+                onSearchClick: {
+                    currentTab = .search
+                }
+            ).tabItem {
                 CustomLabel(tabItem: TabItem.photos, isSelected: true)
             }.tag(TabItem.photos)
             

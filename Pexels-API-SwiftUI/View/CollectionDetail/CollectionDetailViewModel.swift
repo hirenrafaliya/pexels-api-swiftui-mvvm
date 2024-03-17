@@ -29,7 +29,6 @@ extension CollectionDetailView {
                     }
                 case .failure(let error) :
                     self.error = error.getErrorMessage()
-                    print(self.error)
                     return
                 }
             }

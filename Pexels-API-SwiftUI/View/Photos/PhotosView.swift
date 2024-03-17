@@ -10,6 +10,8 @@ import SwiftUI
 
 struct PhotosView: View {
     
+    let onSearchClick: () -> Void
+    
     @StateObject private var viewModel = ViewModel()
     
     var body: some View {
@@ -31,6 +33,15 @@ struct PhotosView: View {
                     }
                 }
                 .navigationTitle("Curated Photos")
+                .toolbar(content: {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button { onSearchClick() } label: {
+                            Label("Search", systemImage: "magnifyingglass")
+                                .foregroundColor(.accentColor)
+                                .labelStyle(.iconOnly)
+                        }
+                    }
+                })
                 
             }
             
