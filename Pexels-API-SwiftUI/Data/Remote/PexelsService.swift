@@ -23,9 +23,9 @@ final class PexelsService {
         }
     }
     
-    func getCollections() async -> Result<CollectionsResponse, ResponseError> {
+    func getCollections(page: String) async -> Result<CollectionsResponse, ResponseError> {
         do {
-            let request = router.buildRequest(url: "\(baseURL)/collection/featured", method: .get)
+            let request = router.buildRequest(url: "\(baseURL)/collections/featured", method: .get, queryParams: ["page": page])
             let result: Result<CollectionsResponse, ResponseError> = await router.executeRequest(request: request)
             return result
         }

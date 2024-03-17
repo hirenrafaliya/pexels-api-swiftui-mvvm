@@ -13,7 +13,7 @@ struct CollectionsResponse: Codable {
 }
 
 struct Collection: Codable, Identifiable {
-    let id: Int
+    let id: String
     let title: String
     let mediaCount: Int
     let photosCount: Int

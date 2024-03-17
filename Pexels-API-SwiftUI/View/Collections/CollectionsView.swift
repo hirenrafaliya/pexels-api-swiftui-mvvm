@@ -10,7 +10,22 @@ import SwiftUI
 
 struct CollectionsView: View {
     
+    @StateObject private var viewModel = ViewModel()
+    
     var body: some View {
-        Text("Collections")
+        NavigationView {
+            List {
+                ForEach(viewModel.collections) { collection in
+                    CollectionItem(collection: collection)
+                        .onAppear {
+                            if collection.id == viewModel.collections.last?.id {
+                                viewModel.getCollections()
+                            }
+                        }
+                }
+            }
+                .navigationTitle("Collections")
+        }
+        
     }
 }

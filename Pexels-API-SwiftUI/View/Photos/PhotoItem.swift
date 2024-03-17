@@ -59,7 +59,7 @@ struct PhotoItem: View {
                 .rotationEffect(showDetails ?
                     .degrees(-135) : .zero)
                 .font(.headline)
-        }``
+        }
         .frame(width: 36,height: 36)
         .background(
             Circle()

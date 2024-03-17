@@ -27,6 +27,8 @@
 		D7D365192BA633F2002C2F05 /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D365182BA633F2002C2F05 /* PhotosViewModel.swift */; };
 		D7D3651B2BA63B8E002C2F05 /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D3651A2BA63B8E002C2F05 /* PhotoItem.swift */; };
 		D7D3651D2BA6A6A7002C2F05 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D3651C2BA6A6A7002C2F05 /* HexColor.swift */; };
+		D7D3651F2BA746BB002C2F05 /* CollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D3651E2BA746BB002C2F05 /* CollectionItem.swift */; };
+		D7D365212BA747B7002C2F05 /* CollectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D365202BA747B7002C2F05 /* CollectionsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		D7D365182BA633F2002C2F05 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
 		D7D3651A2BA63B8E002C2F05 /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
 		D7D3651C2BA6A6A7002C2F05 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
+		D7D3651E2BA746BB002C2F05 /* CollectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionItem.swift; sourceTree = "<group>"; };
+		D7D365202BA747B7002C2F05 /* CollectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				D7D3650C2BA5D543002C2F05 /* CollectionsView.swift */,
+				D7D3651E2BA746BB002C2F05 /* CollectionItem.swift */,
+				D7D365202BA747B7002C2F05 /* CollectionsViewModel.swift */,
 			);
 			path = Collections;
 			sourceTree = "<group>";
@@ -280,6 +286,8 @@
 				D7D365172BA5DDAB002C2F05 /* TabView.swift in Sources */,
 				D7D365092BA5BE96002C2F05 /* NetworkLogger.swift in Sources */,
 				D7D365072BA4E09E002C2F05 /* CollectionMediaResponse.swift in Sources */,
+				D7D3651F2BA746BB002C2F05 /* CollectionItem.swift in Sources */,
+				D7D365212BA747B7002C2F05 /* CollectionsViewModel.swift in Sources */,
 				D7D364E42BA48199002C2F05 /* Pexels_API_SwiftUIApp.swift in Sources */,
 				D7D364F72BA48878002C2F05 /* Constant.swift in Sources */,
 				D7D3651B2BA63B8E002C2F05 /* PhotoItem.swift in Sources */,
