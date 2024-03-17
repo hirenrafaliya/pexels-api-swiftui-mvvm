@@ -40,7 +40,7 @@ struct SearchView: View {
     }
     
     var placeholder: some View {
-        VStack(spacing: 16) {
+        VStack(spacing: 4) {
             Image(systemName: "magnifyingglass")
                 .font(.largeTitle.weight(.semibold))
                 .imageScale(.large)
