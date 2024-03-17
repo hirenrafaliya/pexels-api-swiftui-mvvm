@@ -13,7 +13,7 @@ extension PhotosView {
         @Published private (set) var photos: [Photo] = []
         
         private let pexelsService = PexelsService()
-        private let currentPage = 1
+        private var currentPage = 1
         
         func getPhotos() {
             Task {
@@ -21,8 +21,8 @@ extension PhotosView {
                 switch result {
                 case .success(let response):
                     DispatchQueue.main.async {
-                        self.photos = response.photos
-                        print(self.photos.count)
+                        self.currentPage += 1
+                        self.photos.append(contentsOf: response.photos)
                     }
                 case .failure(let error):
                     print(error)

@@ -18,6 +18,11 @@ struct PhotosView: View {
                 LazyVStack {
                     ForEach(viewModel.photos) { photo in
                         PhotoItem(photo: photo)
+                            .onAppear {
+                                if photo.id == viewModel.photos.last?.id {
+                                    viewModel.getPhotos()
+                                }
+                            }
                     }
                 }
             }
