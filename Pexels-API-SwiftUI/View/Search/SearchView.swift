@@ -20,7 +20,7 @@ struct SearchView: View {
                 ErrorView(error: viewModel.error)
                 
                 ScrollView {
-                    LazyVStack(spacing: 0) {
+                    LazyVStack() {
                         if viewModel.photos.isEmpty {
                             placeholder
                         }

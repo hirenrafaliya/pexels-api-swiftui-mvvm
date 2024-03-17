@@ -98,8 +98,9 @@ struct PhotoItem: View {
                 }.aspectRatio(Double(photo.width)/Double(photo.height), contentMode: .fit)
             case .failure(_):
                 ZStack {
-                    Rectangle().foregroundColor(.init(photo.avgColor))
-                    ProgressView()
+                    Rectangle().foregroundColor(.init(hex: photo.avgColor))
+                    Image(systemName: "wifi.exclamationmark")
+                        .font(.largeTitle)
                 }.aspectRatio(Double(photo.width)/Double(photo.height), contentMode: .fit)
             @unknown default:
                 EmptyView()
