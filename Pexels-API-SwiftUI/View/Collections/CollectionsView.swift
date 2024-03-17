@@ -14,17 +14,22 @@ struct CollectionsView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(viewModel.collections) { collection in
-                    CollectionItem(collection: collection)
-                        .onAppear {
-                            if collection.id == viewModel.collections.last?.id {
-                                viewModel.getCollections()
+            ZStack {
+                
+                ErrorView(error: viewModel.error)
+                
+                List {
+                    ForEach(viewModel.collections) { collection in
+                        CollectionItem(collection: collection)
+                            .onAppear {
+                                if collection.id == viewModel.collections.last?.id {
+                                    viewModel.getCollections()
+                                }
                             }
-                        }
+                    }
                 }
-            }
                 .navigationTitle("Collections")
+            }
         }
         
     }

@@ -11,6 +11,7 @@ extension CollectionsView {
     class ViewModel : ObservableObject {
         
         @Published private (set) var collections: [Collection] = []
+        @Published private (set) var error: String? = nil
         
         private let pexelsService = PexelsService()
         private var currentPage = 1
@@ -29,7 +30,7 @@ extension CollectionsView {
                         self.collections.append(contentsOf: response.collections)
                     }
                 case .failure(let error):
-                    print(error)
+                    self.error = error.getErrorMessage()
                     return
                 }
             }
