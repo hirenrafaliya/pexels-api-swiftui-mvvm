@@ -32,6 +32,7 @@
 		D7D365242BA77738002C2F05 /* CollectionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D365232BA77738002C2F05 /* CollectionDetailView.swift */; };
 		D7D365262BA777D1002C2F05 /* CollectionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D365252BA777D1002C2F05 /* CollectionDetailViewModel.swift */; };
 		D7D365282BA77F30002C2F05 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D365272BA77F30002C2F05 /* ErrorView.swift */; };
+		D7D3652A2BA788FD002C2F05 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D365292BA788FD002C2F05 /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		D7D365232BA77738002C2F05 /* CollectionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetailView.swift; sourceTree = "<group>"; };
 		D7D365252BA777D1002C2F05 /* CollectionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetailViewModel.swift; sourceTree = "<group>"; };
 		D7D365272BA77F30002C2F05 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		D7D365292BA788FD002C2F05 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				D7D3650E2BA5D54D002C2F05 /* SearchView.swift */,
+				D7D365292BA788FD002C2F05 /* SearchViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				D7D365172BA5DDAB002C2F05 /* TabView.swift in Sources */,
 				D7D365092BA5BE96002C2F05 /* NetworkLogger.swift in Sources */,
 				D7D365072BA4E09E002C2F05 /* CollectionMediaResponse.swift in Sources */,
+				D7D3652A2BA788FD002C2F05 /* SearchViewModel.swift in Sources */,
 				D7D3651F2BA746BB002C2F05 /* CollectionItem.swift in Sources */,
 				D7D365212BA747B7002C2F05 /* CollectionsViewModel.swift in Sources */,
 				D7D364E42BA48199002C2F05 /* Pexels_API_SwiftUIApp.swift in Sources */,

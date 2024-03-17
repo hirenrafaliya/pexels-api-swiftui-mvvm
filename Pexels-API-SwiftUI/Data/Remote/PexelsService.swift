@@ -38,4 +38,12 @@ final class PexelsService {
             return result
         }
     }
+    
+    func getPhotosFromSearch(search: String, page: String) async -> Result<CuratedPhotosResponse, ResponseError> {
+        do {
+            let request = router.buildRequest(url: "\(baseURL)/search", method: .get, queryParams: ["query": search])
+            let result: Result<CuratedPhotosResponse, ResponseError> = await router.executeRequest(request: request)
+            return result
+        }
+    }
 }
