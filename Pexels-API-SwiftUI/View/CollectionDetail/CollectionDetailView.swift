@@ -16,23 +16,21 @@ struct CollectionDetailView: View {
     
     var body: some View {
         ZStack {
-            if viewModel.error != nil {
-                ErrorView(error: viewModel.error!)
-            }
             
-            if !viewModel.photos.isEmpty {
-                ScrollView {
-                    LazyVStack {
-                        ForEach(viewModel.photos) { photo in
-                            PhotoItem(photo: photo)
-        //                        .onAppear {
-        //                            if photo.id == viewModel.photos.last?.id {
-        //                                viewModel.getCollectionMedia(collectionId: collection.id)
-        //                            }
-        //                        }
-                        }
+            ErrorView(error: viewModel.error)
+            
+            ScrollView {
+                LazyVStack {
+                    ForEach(viewModel.photos) { photo in
+                        PhotoItem(photo: photo)
+//                            .onAppear {
+//                                if photo.id == viewModel.photos.last?.id {
+//                                    viewModel.getCollectionMedia(collectionId: collection.id)
+//                                }
+//                            }
                     }
                 }
+                
             }
         }
         .onAppear {

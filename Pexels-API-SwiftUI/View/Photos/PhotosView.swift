@@ -14,20 +14,25 @@ struct PhotosView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                LazyVStack {
-                    ForEach(viewModel.photos) { photo in
-                        PhotoItem(photo: photo)
-                            .onAppear {
-                                if photo.id == viewModel.photos.last?.id {
-                                    viewModel.getPhotos()
+            ZStack {
+                
+                ErrorView(error: viewModel.error)
+                
+                ScrollView {
+                    LazyVStack {
+                        ForEach(viewModel.photos) { photo in
+                            PhotoItem(photo: photo)
+                                .onAppear {
+                                    if photo.id == viewModel.photos.last?.id {
+                                        viewModel.getPhotos()
+                                    }
                                 }
-                            }
+                        }
                     }
                 }
+                .navigationTitle("Curated Photos")
+                
             }
-            
-            .navigationTitle("Curated Photos")
             
         }
     }

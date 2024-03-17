@@ -9,19 +9,21 @@ import Foundation
 import SwiftUI
 
 struct ErrorView: View {
-    let error: String
+    let error: String?
     
     var body: some View {
-        VStack {
-            Image(systemName: "exclamationmark.triangle")
-                            .foregroundColor(.red)
-                            .font(.system(size: 25))
-            
-            Text(error)
-                .foregroundColor(.red)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 18)
-                .padding(.vertical, 2)
+        if error != nil {
+            VStack {
+                Image(systemName: "exclamationmark.triangle")
+                                .foregroundColor(.red)
+                                .font(.system(size: 25))
+                
+                Text(error ?? "Unknown error!")
+                    .foregroundColor(.red)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 18)
+                    .padding(.vertical, 2)
+            }
         }
     }
 }

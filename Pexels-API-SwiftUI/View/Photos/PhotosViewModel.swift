@@ -11,6 +11,7 @@ extension PhotosView {
     class ViewModel: ObservableObject {
         
         @Published private (set) var photos: [Photo] = []
+        @Published private (set) var error: String? = nil
         
         private let pexelsService = PexelsService()
         private var currentPage = 1
@@ -29,7 +30,7 @@ extension PhotosView {
                         self.photos.append(contentsOf: response.photos)
                     }
                 case .failure(let error):
-                    print(error)
+                    self.error = error.getErrorMessage()
                     return
                 }
             }
