@@ -17,8 +17,12 @@ enum HttpMethod: String {
 
 final class NetworkRouter {
     
-    func buildRequest(url: String, method: HttpMethod, headers: [String: String]? = nil, body: Data? = nil) -> URLRequest {
-        var request = URLRequest(url: URL(string: url)!)
+    func buildRequest(url: String, method: HttpMethod, queryParams: [String: String]? = nil, headers: [String: String]? = nil, body: Data? = nil) -> URLRequest {
+        
+        var urlComponent = URLComponents(string: url)
+        urlComponent?.queryItems = queryParams?.map { URLQueryItem(name: $0.key, value: $0.value) }
+
+        var request = URLRequest(url: (urlComponent?.url)!)
         request.httpMethod = method.rawValue
         
         var updatedHeaders = headers ?? [:]

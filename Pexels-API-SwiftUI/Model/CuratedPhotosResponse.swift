@@ -12,7 +12,7 @@ struct CuratedPhotosResponse: Decodable {
     let photos: [Photo]
 }
 
-struct Photo: Codable {
+struct Photo: Codable, Identifiable {
     let id: Int
     let width: Int
     let height: Int
@@ -26,5 +26,9 @@ struct Photo: Codable {
 
 struct Src: Codable {
     let original: String
+    let small: String
+    let large: String
+    let medium: String
+    let large2x: String
 }
 

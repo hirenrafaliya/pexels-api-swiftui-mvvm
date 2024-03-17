@@ -13,8 +13,20 @@ struct PhotosView: View {
     @StateObject private var viewModel = ViewModel()
     
     var body: some View {
-        Text("Photos").onAppear(perform: {
+        NavigationView {
+            ScrollView {
+                LazyVStack {
+                    ForEach(viewModel.photos) { photo in
+                        PhotoItem(photo: photo)
+                    }
+                }
+            }
+            
+            .navigationTitle("Curated Photos")
+            
+        }
+        .onAppear {
             viewModel.getPhotos()
-        })
+        }
     }
 }

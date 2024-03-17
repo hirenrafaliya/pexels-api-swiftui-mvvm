@@ -24,6 +24,9 @@
 		D7D3650F2BA5D54D002C2F05 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D3650E2BA5D54D002C2F05 /* SearchView.swift */; };
 		D7D365112BA5D5C8002C2F05 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D365102BA5D5C8002C2F05 /* Environment.swift */; };
 		D7D365172BA5DDAB002C2F05 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D365162BA5DDAB002C2F05 /* TabView.swift */; };
+		D7D365192BA633F2002C2F05 /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D365182BA633F2002C2F05 /* PhotosViewModel.swift */; };
+		D7D3651B2BA63B8E002C2F05 /* PhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D3651A2BA63B8E002C2F05 /* PhotoItem.swift */; };
+		D7D3651D2BA6A6A7002C2F05 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D3651C2BA6A6A7002C2F05 /* HexColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,9 @@
 		D7D3650E2BA5D54D002C2F05 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		D7D365102BA5D5C8002C2F05 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		D7D365162BA5DDAB002C2F05 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		D7D365182BA633F2002C2F05 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
+		D7D3651A2BA63B8E002C2F05 /* PhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItem.swift; sourceTree = "<group>"; };
+		D7D3651C2BA6A6A7002C2F05 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,7 @@
 			children = (
 				D7D364F62BA48878002C2F05 /* Constant.swift */,
 				D7D365102BA5D5C8002C2F05 /* Environment.swift */,
+				D7D3651C2BA6A6A7002C2F05 /* HexColor.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -158,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				D7D3650A2BA5D52E002C2F05 /* PhotosView.swift */,
+				D7D365182BA633F2002C2F05 /* PhotosViewModel.swift */,
+				D7D3651A2BA63B8E002C2F05 /* PhotoItem.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -263,14 +272,17 @@
 				D7D365052BA4DF92002C2F05 /* CollectionsResponse.swift in Sources */,
 				D7D364FB2BA49A36002C2F05 /* ResponseError.swift in Sources */,
 				D7D3650B2BA5D52E002C2F05 /* PhotosView.swift in Sources */,
+				D7D3651D2BA6A6A7002C2F05 /* HexColor.swift in Sources */,
 				D7D364FD2BA49DD8002C2F05 /* NetworkRouter.swift in Sources */,
 				D7D365032BA4DC29002C2F05 /* CuratedPhotosResponse.swift in Sources */,
+				D7D365192BA633F2002C2F05 /* PhotosViewModel.swift in Sources */,
 				D7D3650F2BA5D54D002C2F05 /* SearchView.swift in Sources */,
 				D7D365172BA5DDAB002C2F05 /* TabView.swift in Sources */,
 				D7D365092BA5BE96002C2F05 /* NetworkLogger.swift in Sources */,
 				D7D365072BA4E09E002C2F05 /* CollectionMediaResponse.swift in Sources */,
 				D7D364E42BA48199002C2F05 /* Pexels_API_SwiftUIApp.swift in Sources */,
 				D7D364F72BA48878002C2F05 /* Constant.swift in Sources */,
+				D7D3651B2BA63B8E002C2F05 /* PhotoItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,9 +15,9 @@ final class PexelsService {
         self.router = NetworkRouter()
     }
     
-    func getCuratedPhotos() async -> Result<CuratedPhotosResponse, ResponseError> {
+    func getCuratedPhotos(page: String) async -> Result<CuratedPhotosResponse, ResponseError> {
         do {
-            let request = router.buildRequest(url: "\(baseURL)/curated", method: .get)
+            let request = router.buildRequest(url: "\(baseURL)/curated", method: .get, queryParams: ["page": page])
             let result: Result<CuratedPhotosResponse, ResponseError> = await router.executeRequest(request: request)
             return result
         }
