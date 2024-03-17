@@ -8,7 +8,7 @@
 import Foundation
 
 final class PexelsService {
-    private let baseURL = "https://api.pexels.com/v1"
+    public let baseURL: String = "https://api.pexels.com/v1"
     private let router: NetworkRouter
     
     init() {

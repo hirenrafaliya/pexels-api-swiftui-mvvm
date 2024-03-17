@@ -15,6 +15,10 @@ extension PhotosView {
         private let pexelsService = PexelsService()
         private var currentPage = 1
         
+        init() {
+            getPhotos()
+        }
+        
         func getPhotos() {
             Task {
                 let result = await pexelsService.getCuratedPhotos(page: String(currentPage))

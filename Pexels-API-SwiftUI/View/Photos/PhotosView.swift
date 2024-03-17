@@ -30,8 +30,5 @@ struct PhotosView: View {
             .navigationTitle("Curated Photos")
             
         }
-        .onAppear {
-            viewModel.getPhotos()
-        }
     }
 }
