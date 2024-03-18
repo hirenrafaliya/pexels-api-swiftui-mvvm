@@ -14,7 +14,7 @@ extension PhotosView {
         @Published private (set) var error: String? = nil
         
         private let pexelsService = PexelsService()
-        private var currentPage = 1
+        private var currentPage = 2
         
         init() {
             getPhotos()

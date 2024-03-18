@@ -89,7 +89,7 @@ struct PhotoItem: View {
             switch phase {
             case .success(let image):
                 image.resizable()
-                    .aspectRatio(contentMode: .fit)
+                    .aspectRatio(Double(photo.width)/Double(photo.height), contentMode: .fit)
                     .transition(.scale(scale: 1.05, anchor: .center).combined(with: .opacity).animation(.easeInOut))
             case .empty:
                 ZStack {
@@ -107,11 +107,11 @@ struct PhotoItem: View {
             }
         }
         .frame(maxWidth: .infinity)
-        .onTapGesture {
-            withAnimation(.spring(response: 0.3, dampingFraction: 0.7, blendDuration: 2)) {
-                showDetails.toggle()
-            }
-            
-        }
+//        .onTapGesture {
+//            withAnimation(.spring(response: 0.3, dampingFraction: 0.7, blendDuration: 2)) {
+//                showDetails.toggle()
+//            }
+//            
+//        }
     }
 }
