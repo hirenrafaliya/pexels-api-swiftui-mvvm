@@ -26,25 +26,7 @@ struct PhotosView: View {
                     ErrorView(error: viewModel.error)
                     
                     ScrollView {
-                        LazyVStack {
-                            ForEach(viewModel.photos) { photo in
-                                    PhotoItem(photo: photo)
-                                        .onTapGesture {
-                                            currentPhoto = photo
-                                            withAnimation(.spring()) {
-                                                showLarge.toggle()
-                                            }
-                                        }
-                                        .onAppear {
-                                            if photo.id == viewModel.photos.last?.id {
-                                                viewModel.getPhotos()
-                                            }
-                                        }
-                                        .matchedGeometryEffect(id: photo.id, in: namespace, properties: .frame)
-                                        .zIndex(currentPhoto?.id == photo.id ? 4 : -1)
-                                
-                            }
-                        }
+                        gridPhotosView
                     }
                     .navigationTitle("Curated Photos")
                     .toolbar(content: {
@@ -79,5 +61,34 @@ struct PhotosView: View {
                     .zIndex(4)
             }
         }
+    }
+    
+    func photosView(photos: [Photo]) -> some View {
+        LazyVStack {
+            ForEach(photos) { photo in
+                PhotoItem(photo: photo, showDetails: false, horizontalPadding: 1)
+                    .onTapGesture {
+                        currentPhoto = photo
+                        withAnimation(.spring()) {
+                            showLarge.toggle()
+                        }
+                    }
+                    .onAppear {
+                        if photo.id == viewModel.photos.last?.id {
+                            viewModel.getPhotos()
+                        }
+                    }
+                    .matchedGeometryEffect(id: photo.id, in: namespace, properties: .frame)
+                    .zIndex(currentPhoto?.id == photo.id ? 4 : -1)
+            }
+        }
+    }
+    
+    var gridPhotosView: some View {
+        HStack(alignment: .top) {
+            photosView(photos: viewModel.photoArray[0])
+            photosView(photos: viewModel.photoArray[1])
+        }
+        .padding(.horizontal, 6)
     }
 }

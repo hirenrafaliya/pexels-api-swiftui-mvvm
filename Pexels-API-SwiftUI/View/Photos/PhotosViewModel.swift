@@ -11,6 +11,7 @@ extension PhotosView {
     class ViewModel: ObservableObject {
         
         @Published private (set) var photos: [Photo] = []
+        @Published private (set) var photoArray: [[Photo]] = [[],[]]
         @Published private (set) var error: String? = nil
         
         private let pexelsService = PexelsService()
@@ -28,6 +29,7 @@ extension PhotosView {
                     DispatchQueue.main.async {
                         self.currentPage += 1
                         self.photos.append(contentsOf: response.photos)
+                        self.photoArray = self.splitArray()
                     }
                 case .failure(let error):
                     self.error = error.getErrorMessage()
@@ -35,5 +37,28 @@ extension PhotosView {
                 }
             }
         }
+        
+        private func splitArray() -> [[Photo]] {
+                var result: [[Photo]] = []
+                
+                var list1: [Photo] = []
+                var list2: [Photo] = []
+                
+                photos.forEach { photo in
+                    let index = photos.firstIndex {$0.id == photo.id }
+                    
+                    if let index = index {
+                        if index % 2 == 0  {
+                            list1.append(photo)
+                        } else {
+                            list2.append(photo)
+                        }
+                    }
+                }
+                result.append(list1)
+                result.append(list2)
+                return result
+                
+            }
     }
 }
