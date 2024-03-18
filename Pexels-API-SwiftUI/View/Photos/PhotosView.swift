@@ -41,6 +41,7 @@ struct PhotosView: View {
                     
                 }
             }
+            .toolbar(showLarge ? .hidden : .visible, for: .tabBar)
             .zIndex(1)
             
             if showLarge {
