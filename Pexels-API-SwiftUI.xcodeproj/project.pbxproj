@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D730946B2BA8567B000E4549 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D730946A2BA8567B000E4549 /* Snapshot.swift */; };
 		D7D364E42BA48199002C2F05 /* Pexels_API_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D364E32BA48199002C2F05 /* Pexels_API_SwiftUIApp.swift */; };
 		D7D364E62BA48199002C2F05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D364E52BA48199002C2F05 /* ContentView.swift */; };
 		D7D364E82BA4819A002C2F05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7D364E72BA4819A002C2F05 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D730946A2BA8567B000E4549 /* Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapshot.swift; sourceTree = "<group>"; };
 		D7D364E02BA48199002C2F05 /* Pexels-API-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pexels-API-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7D364E32BA48199002C2F05 /* Pexels_API_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pexels_API_SwiftUIApp.swift; sourceTree = "<group>"; };
 		D7D364E52BA48199002C2F05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				D7D3652E2BA7AD6D002C2F05 /* VisualEffectView.swift */,
 				D7D365162BA5DDAB002C2F05 /* TabView.swift */,
 				D7D365272BA77F30002C2F05 /* ErrorView.swift */,
+				D730946A2BA8567B000E4549 /* Snapshot.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				D7D365012BA4DBDC002C2F05 /* PexelsService.swift in Sources */,
 				D7D364E62BA48199002C2F05 /* ContentView.swift in Sources */,
 				D7D3650D2BA5D543002C2F05 /* CollectionsView.swift in Sources */,
+				D730946B2BA8567B000E4549 /* Snapshot.swift in Sources */,
 				D7D365262BA777D1002C2F05 /* CollectionDetailViewModel.swift in Sources */,
 				D7D365112BA5D5C8002C2F05 /* Environment.swift in Sources */,
 				D7D365052BA4DF92002C2F05 /* CollectionsResponse.swift in Sources */,

@@ -14,6 +14,7 @@ struct PhotoItem: View {
     let horizontalPadding: CGFloat
     
     @State private var isExapnded = false
+    @State private var image: UIImage?
     
     init(photo: Photo, showDetails: Bool = true, horizontalPadding: CGFloat = 12) {
         self.photo = photo
@@ -24,12 +25,12 @@ struct PhotoItem: View {
     var body: some View {
         Group {
             ZStack(alignment: .bottom) {
-                image
+                asyncImage
                 
                 if showDetails {
                     detail
                 }
-                    
+                
             }
             .clipShape(RoundedRectangle(cornerRadius: isExapnded ? 16 : 12))
         }
@@ -46,6 +47,21 @@ struct PhotoItem: View {
             }
             .offset(x: 0, y: isExapnded ? 0 : 70)
             .opacity(isExapnded ? 1 : 0)
+            
+            Button {
+                shareImage()
+            } label: {
+                Image(systemName: "square.and.arrow.up")
+                    .font(.headline)
+            }
+            .frame(width: 36,height: 36)
+            .background(
+                Circle()
+                    .foregroundStyle(isExapnded ?
+                        .regularMaterial : .ultraThickMaterial)
+            )
+            .opacity(isExapnded ? 1 : 0)
+            
             
             expandButton
         }
@@ -96,13 +112,19 @@ struct PhotoItem: View {
     }
     
     
-    var image: some View {
+    var asyncImage: some View {
         AsyncImage(url: URL(string: photo.src.large), transaction: Transaction(animation: .easeInOut)) { phase in
             switch phase {
             case .success(let image):
                 image.resizable()
                     .aspectRatio(Double(photo.width)/Double(photo.height), contentMode: .fit)
                     .transition(.scale(scale: 1.05, anchor: .center).combined(with: .opacity).animation(.easeInOut))
+                    .onAppear {
+                        DispatchQueue.main.async {
+                            self.image = image.snapshot()
+                        }
+                    }
+                
             case .empty:
                 ZStack {
                     Rectangle().foregroundColor(.init(hex: photo.avgColor).opacity(0.25))
@@ -119,11 +141,17 @@ struct PhotoItem: View {
             }
         }
         .frame(maxWidth: .infinity)
-//        .onTapGesture {
-//            withAnimation(.spring(response: 0.3, dampingFraction: 0.7, blendDuration: 2)) {
-//                showDetails.toggle()
-//            }
-//            
-//        }
+        //        .onTapGesture {
+        //            withAnimation(.spring(response: 0.3, dampingFraction: 0.7, blendDuration: 2)) {
+        //                showDetails.toggle()
+        //            }
+        //
+        //        }
+    }
+    
+    func shareImage() {
+        guard let share = image else { return }
+        let activityViewController = UIActivityViewController(activityItems: [share], applicationActivities: nil)
+        UIApplication.shared.windows.first?.rootViewController?.present(activityViewController, animated: true, completion: nil)
     }
 }
