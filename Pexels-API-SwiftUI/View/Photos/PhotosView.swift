@@ -41,25 +41,21 @@ struct PhotosView: View {
                     
                 }
             }
-            .toolbar(showLarge ? .hidden : .visible, for: .tabBar)
-            .zIndex(1)
             
             if showLarge {
                 VisualEffectView(uiVisualEffect: UIBlurEffect(style: .light))
                     .edgesIgnoringSafeArea(.all)
                     .transition(.opacity)
-                    .zIndex(2)
             }
             
             if showLarge {
                 PhotoItem(photo: currentPhoto!)
-                    .matchedGeometryEffect(id: currentPhoto!.id, in: namespace, properties: .position)
+                    .matchedGeometryEffect(id: currentPhoto!.id, in: namespace, properties: .frame)
                     .onTapGesture {
                         withAnimation(.spring()) {
                             showLarge.toggle()
                         }
                     }
-                    .zIndex(4)
             }
         }
     }
@@ -80,7 +76,6 @@ struct PhotosView: View {
                         }
                     }
                     .matchedGeometryEffect(id: photo.id, in: namespace, properties: .frame)
-                    .zIndex(currentPhoto?.id == photo.id ? 4 : -1)
             }
         }
     }
