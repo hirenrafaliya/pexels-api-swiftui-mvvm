@@ -13,6 +13,9 @@ struct SearchView: View {
     @StateObject var viewModel = ViewModel()
     @State var searchText: String = ""
     
+    var categories = ["Australia", "Japan", "Chile", "Africa", "Mexico"]
+    @State var currentCategory = ""
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -20,6 +23,21 @@ struct SearchView: View {
                 ErrorView(error: viewModel.error)
                 
                 ScrollView {
+                    ScrollView(.horizontal) {
+                        Picker("Category", selection: $currentCategory) {
+                            ForEach(categories, id: \.self) {
+                                Text($0)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                        .padding(.horizontal)
+                        .onChange(of: currentCategory) {
+                            searchText = ""
+                            viewModel.search(for: currentCategory)
+                        }
+                    }
+                    
+                    
                     LazyVStack() {
                         if viewModel.photos.isEmpty {
                             placeholder
@@ -34,8 +52,9 @@ struct SearchView: View {
                 .searchable(text: $searchText, placement: .navigationBarDrawer, prompt: "Search")
                 .onSubmit(of: .search) {
                     viewModel.search(for: searchText)
+                    currentCategory = ""
                 }
-            }
+             }
         }
     }
     

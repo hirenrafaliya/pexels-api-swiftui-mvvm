@@ -16,6 +16,7 @@ extension SearchView {
         private let pexelsService = PexelsService()
         
         func search(for text: String) {
+            error = nil
             Task {
                 let result = await pexelsService.getPhotosFromSearch(search: text, page: "1")
                 switch(result) {
