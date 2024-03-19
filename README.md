@@ -18,4 +18,4 @@ An iOS app built using SwiftUI with MVVM architecture. It uses Pexels API to fet
 ------------
 
 
-https://firebasestorage.googleapis.com/v0/b/android-essentials-2d9a4.appspot.com/o/assets%2Fpixels-api-swiftui-mvvm%2F3b52d8e2-e887-4fcf-bee7-7775112b3335.mp4?alt=media&token=421aef68-f15e-4934-9258-e57bc3ec6ec2
+[!(Video)(https://imgur.com/a/31AF9Jf)](https://firebasestorage.googleapis.com/v0/b/android-essentials-2d9a4.appspot.com/o/assets%2Fpixels-api-swiftui-mvvm%2F3b52d8e2-e887-4fcf-bee7-7775112b3335.mp4?alt=media&token=421aef68-f15e-4934-9258-e57bc3ec6ec2)
