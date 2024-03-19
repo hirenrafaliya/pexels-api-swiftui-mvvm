@@ -17,11 +17,11 @@ An iOS app built using SwiftUI with MVVM architecture. It uses Pexels API to fet
 
 ------------
 
-Not working
+Video 1 : Not working
   
 https://github.com/hirenrafaliya/pexels-api-swiftui-mvvm/raw/st-demo/assets/app-recording.mp4
 
-Working  
+Video 2 : Working  
 
 https://github.com/hirenrafaliya/pexels-api-swiftui-mvvm/raw/st-demo/assets/244897901-62f541aa-aa8c-43f5-9ead-4b7a2e0d7c2a.mp4
 
