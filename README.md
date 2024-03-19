@@ -18,4 +18,4 @@ An iOS app built using SwiftUI with MVVM architecture. It uses Pexels API to fet
 ------------
 
 
-[!App Recording](https://imgur.com/a/31AF9Jf)(https://imgur.com/a/MELPnU5)
+[![App Recording](https://imgur.com/a/31AF9Jf)](https://imgur.com/a/MELPnU5)
