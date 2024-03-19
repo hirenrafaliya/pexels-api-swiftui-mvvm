@@ -21,7 +21,9 @@ extension SearchView {
                 let result = await pexelsService.getPhotosFromSearch(search: text, page: "1")
                 switch(result) {
                 case .success(let response):
-                    photos = response.photos
+                    DispatchQueue.main.async {
+                        self.photos = response.photos
+                    }
                 case .failure(let error):
                     self.error = error.getErrorMessage()
                 }

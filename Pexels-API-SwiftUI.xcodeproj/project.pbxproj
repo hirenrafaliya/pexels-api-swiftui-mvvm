@@ -101,7 +101,6 @@
 			children = (
 				D7D364F52BA4834F002C2F05 /* Data */,
 				D7D364F42BA482C9002C2F05 /* Util */,
-				D7D364F32BA482BE002C2F05 /* ViewModel */,
 				D7D364F22BA482B8002C2F05 /* View */,
 				D7D364F12BA48299002C2F05 /* Model */,
 				D7D364E32BA48199002C2F05 /* Pexels_API_SwiftUIApp.swift */,
@@ -140,13 +139,6 @@
 				D7D364E52BA48199002C2F05 /* ContentView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		D7D364F32BA482BE002C2F05 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D7D364F42BA482C9002C2F05 /* Util */ = {
