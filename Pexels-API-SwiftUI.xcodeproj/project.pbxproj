@@ -39,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		D730946A2BA8567B000E4549 /* Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapshot.swift; sourceTree = "<group>"; };
+		D730946C2BA99789000E4549 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D7D364E02BA48199002C2F05 /* Pexels-API-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pexels-API-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7D364E32BA48199002C2F05 /* Pexels_API_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pexels_API_SwiftUIApp.swift; sourceTree = "<group>"; };
 		D7D364E52BA48199002C2F05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +84,7 @@
 		D7D364D72BA48199002C2F05 = {
 			isa = PBXGroup;
 			children = (
+				D730946C2BA99789000E4549 /* README.md */,
 				D7D364E22BA48199002C2F05 /* Pexels-API-SwiftUI */,
 				D7D364E12BA48199002C2F05 /* Products */,
 			);
